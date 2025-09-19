@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Bhargav Karnati - Data Analyst Portfolio</title>
+<style>
+  /* Reset and base */
+  * {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+  }
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f9f9f9;
+    margin: 0;
+    color: #333;
+    line-height: 1.6;
+  }
+  a {
+    color: #2563eb;
+    text-decoration: none;
+  }
+  a:hover {
+    text-decoration: underline;
+  }
+
+  header {
+    background-color: #1f2937;
+    color: #f9fafb;
+    padding: 1rem 2rem;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  header h1 {
+    margin: 0;
+    font-size: 1.8rem;
+    letter-spacing: 1px;
+  }
+  nav a {
+    margin-left: 2rem;
+    font-weight: 600;
+    font-size: 1rem;
+  }
+
+  /* Banner area */
+  .banner {
+    max-width: 900px;
+    margin: 3rem auto 1.5rem;
+    background: white;
+    padding: 3rem 2rem;
+    border-radius: 12px;
+    box-shadow: 0 6px 25px rgba(0,0,0,0.07);
+    text-align: center;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+  }
+  .banner.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  .banner h2 {
+    font-size: 2.2rem;
+    color: #1e40af;
+    margin: 0 0 0.3rem;
+  }
+  .banner p {
+    font-size: 1.1rem;
+    color: #374151;
+    margin: 0.5rem 0 1.8rem;
+    font-weight: 500;
+  }
+  .btn-download {
+    background-color: #2563eb;
+    color: white;
+    border: none;
+    padding: 0.85rem 1.8rem;
+    font-weight: 600;
+    font-size: 1rem;
+    border-radius: 6px;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+  }
+  .btn-download:hover {
+    background-color: #1e40af;
+  }
+
+  section {
+    max-width: 900px;
+    margin: 3rem auto 4rem;
+    background: white;
+    padding: 2rem 2.5rem;
+    border-radius: 10px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.05);
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  }
+  section.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  h2 {
+    border-bottom: 3px solid #2563eb;
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+    color: #2563eb;
+    font-size: 1.8rem;
+  }
+  h3 {
+    margin: 1rem 0 0.5rem;
+    color: #1f2937;
+  }
+  ul {
+    list-style-type: none;
+    padding-left: 0;
+  }
+  ul li {
+    margin: 0.7rem 0;
+    font-size: 1rem;
+  }
+  .contact-info a {
+    display: inline-block;
+    margin-top: 0.3rem;
+  }
+
+  /* Social icons fixed right side */
+  .social-icons {
+    position: fixed;
+    right: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    z-index: 1000;
+  }
+  .social-icons a {
+    background-color: #2563eb;
+    color: white;
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-size: 22px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+  }
+  .social-icons a:hover {
+    background-color: #1e40af;
+  }
+
+  footer {
+    text-align: center;
+    padding: 1.5rem 2rem;
+    background-color: #1f2937;
+    color: #f9fafb;
+    font-size: 0.9rem;
+  }
+  @media (max-width: 600px) {
+    header {
+      flex-direction: column;
+      text-align: center;
+      gap: 1rem;
+    }
+    nav a {
+      margin-left: 0;
+      margin-right: 1rem;
+    }
+    section {
+      margin: 2rem 1rem 3rem;
+      padding: 1.5rem 1.5rem;
+    }
+    .social-icons {
+      right: 0.4rem;
+      top: auto;
+      bottom: 1.2rem;
+      transform: none;
+      flex-direction: row;
+      width: 100%;
+      justify-content: center;
+      gap: 1.5rem;
+      background: transparent;
+      position: fixed;
+    }
+    .social-icons a {
+      width: 38px;
+      height: 38px;
+      font-size: 18px;
+    }
+  }
+</style>
+
+<!-- FontAwesome for social icons -->
+<script src="https://kit.fontawesome.com/a81368914c.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+<header>
+  <h1>Bhargav Karnati</h1>
+  <nav>
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#education">Education</a>
+    <a href="#achievements">Achievements</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<div class="banner animate">
+  <h2>Hello, I'm Bhargav Karnati</h2>
+  <p>Data Analyst | Power BI | SQL | Python | Tableau</p>
+  <a href="BHARGAV-KARNATI-Data-Analyst-Resume.pdf" download class="btn-download" aria-label="Download Resume">Download Resume</a>
+</div>
+
+<section id="about" class="animate">
+  <h2>About Me</h2>
+  <p>Data Analyst proficient in Data Visualization, Reporting, Dashboarding, and Insight Analysis using SQL, Excel, Python, Power BI, Tableau, and MySQL. Strong analytical skills and problem-solving abilities with a proactive learning mindset.</p>
+  <h3>Technical Skills</h3>
+  <ul>
+    <li>Power BI Desktop, Power BI Service, DAX, Power Query M-Query</li>
+    <li>Advanced Excel, VBA</li>
+    <li>Tableau, Data Visualization, Data Modelling</li>
+    <li>SQL, MySQL</li>
+    <li>Python, Data Cleaning</li>
+    <li>Data Storytelling</li>
+  </ul>
+  <h3>Strengths</h3>
+  <ul>
+    <li>Problem Solving and identifying inefficiencies</li>
+    <li>Strong communication and collaboration skills</li>
+  </ul>
+</section>
+
+<section id="projects" class="animate">
+  <h2>Projects</h2>
+  <ul>
+    <li><strong>Car Sales Dashboard (Power BI):</strong> Interactive dashboard tracking total sales, average sales, sales by category and geography with dynamic filters.</li>
+    <li><strong>Blinkit Sales Analysis (Power BI):</strong> Dashboard analyzing grocery sales performance, customer behavior, and delivery timelines with dynamic filtering.</li>
+    <li><strong>SuperStore Sales Profit Analysis (Tableau):</strong> Visualizations highlighting sales, profit, and quantity with regional and category segmentation.</li>
+    <li><strong>Elections Results Analysis India 2024 (MySQL):</strong> SQL analysis of 2024 Indian General Elections data to extract insights on party performance and vote distributions.</li>
+  </ul>
+</section>
+
+<section id="education" class="animate">
+  <h2>Education</h2>
+  <p><strong>Master of Computer Applications (MCA)</strong>, Sri Venkateswara University, 2022-2024, CGPA: 7.80</p>
+</section>
+
+<section id="achievements" class="animate">
+  <h2>Achievements</h2>
+  <ul>
+    <li>HackerRank SQL Gold Badge</li>
+    <li>HackerRank Python Gold Badge</li>
+    <li>Certified by CLOUDYML in Power BI, SQL, Python, Excel, Tableau</li>
+    <li>CA-CPT by the Institute of Chartered Accountants of India</li>
+  </ul>
+</section>
+
+<section id="contact" class="animate">
+  <h2>Contact</h2>
+  <p class="contact-info">
+    Phone: 8309513402<br />
+    Email: <a href="mailto:karnatibhargav19@gmail.com">karnatibhargav19@gmail.com</a><br />
+    LinkedIn: <a href="https://linkedin.com/in/bhargavkarnati" target="_blank" rel="noopener noreferrer">linkedin.com/in/bhargavkarnati</a><br />
+    GitHub: <a href="https://github.com/bhargavkarnati" target="_blank" rel="noopener noreferrer">github.com/bhargavkarnati</a>
+  </p>
+</section>
+
+<div class="social-icons">
+  <a href="https://linkedin.com/in/bhargavkarnati" target="_blank" aria-label="LinkedIn" rel="noopener noreferrer"><i class="fab fa-linkedin-in"></i></a>
+  <a href="https://github.com/bhargavkarnati" target="_blank" aria-label="GitHub" rel="noopener noreferrer"><i class="fab fa-github"></i></a>
+  <a href="mailto:karnatibhargav19@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+</div>
+
+<footer>
+  &copy; 2025 Bhargav Karnati
+</footer>
+
+<script>
+  // Scroll animation for sections
+  const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+          if(entry.isIntersecting) {
+              entry.target.classList.add('visible');
+          }
+      });
+  }, {threshold: 0.1});
+
+  document.querySelectorAll('.animate').forEach(section => {
+      observer.observe(section);
+  });
+</script>
+
+</body>
+</html>
